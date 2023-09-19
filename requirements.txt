@@ -1,1 +1,4 @@
 phospho
+dotenv
+os
+langchain
