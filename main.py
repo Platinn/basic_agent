@@ -1,10 +1,23 @@
 from phospho import Agent, Message
+from dotenv import load_dotenv
+from langchain.schema import (
+    AIMessage,
+    HumanMessage,
+    SystemMessage
+)
+from langchain.chat_models import ChatOpenAI
+import os 
+
+# Load your environment variables
+load_dotenv()
+
+open_ai_key = os.getenv("OPEN_AI_KEY")
 
 # Initialize the agent
 agent = Agent()
 
 def ph_agent(input : str):
-    response = f"John asked : {input}"
+    response = f"John asked : {input} {open_ai_key}"
     return response 
 
 # Define your routes
