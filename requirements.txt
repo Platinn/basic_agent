@@ -1,4 +1,4 @@
 phospho
-dotenv
+python-dotenv
 os
 langchain
