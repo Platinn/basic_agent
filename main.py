@@ -28,7 +28,7 @@ def my_agent(input):
     
     response=search_agent.run(messages)
 
-    return response.content
+    return response
 
 # Package it into a phospho agent
 agent = Agent()
