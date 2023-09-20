@@ -28,7 +28,7 @@ def my_agent(input):
     
     response=search_agent.run(messages)
 
-    return response
+    return response.content
 
 # Package it into a phospho agent
 agent = Agent()
@@ -36,7 +36,7 @@ agent = Agent()
 @agent.chat()
 def my_chat(message):
     # Use our agent logic to generate a response
-    response = my_agent(message)
+    response = my_agent(message.content)
     # Return the response in a Message object
     return Message(response)
 
