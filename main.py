@@ -40,7 +40,7 @@ agent = Agent()
 @agent.chat()
 def my_chat(message):
     session = client.sessions.create(data=None)
-    task = client.tasks.create(session_id=session.id, additional_input=None, data=None, sender_id=None, input=message.content)
+    task = client.tasks.create(session_id=session.id, additional_input=None, data=None, sender_id="xxx", input=message.content)
     step = client.steps.create(task_id=task.id, input=message.content, name="search step", is_last=True, status="completed", additional_input=None, data=None)
     # Use our agent logic to generate a response
     response = my_agent(message.content)
