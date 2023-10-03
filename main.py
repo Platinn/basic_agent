@@ -45,7 +45,7 @@ def my_chat(message):
     # Use our agent logic to generate a response
     response = my_agent(message.content)
 
-    step.update(output=response.content)
+    step.update(output=response)
     session.update(metadata={"flag": "success"})
 
     # Return the response in a Message object
