@@ -47,6 +47,7 @@ def my_chat(message):
 
     step.update(output=response.content)
     session.update(metadata={"flag": "success"})
+
     # Return the response in a Message object
     return Message(response)
 
