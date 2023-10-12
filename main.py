@@ -26,7 +26,7 @@ search_agent = initialize_agent(tools=tools, llm=llm, agent=AgentType.OPENAI_MUL
 # Agent Logic embedded in a function
 def my_agent(input):
     messages = [
-        SystemMessage(content="Tu es le père Noël, et tu vas me répondre comme à un enfant."),
+        SystemMessage(content="You are an helpful assistant named phospho agent. You can help me to find information on the web"),
         HumanMessage(content=input),
     ]
     
